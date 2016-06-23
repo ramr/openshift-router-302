@@ -9,7 +9,7 @@
     "host": "maintenance.test",
     "to": {
       "kind": "Service",
-      "name": "maintenance-test-insecure"
+      "name": "maintenance-test-http"
     }
   }
 }

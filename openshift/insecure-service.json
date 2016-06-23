@@ -2,9 +2,9 @@
   "kind": "Service",
   "apiVersion": "v1",
   "metadata": {
-    "name": "maintenance-test-insecure",
+    "name": "maintenance-test-http",
     "labels": {
-      "name": "maintenance-test-insecure"
+      "name": "maintenance-test-http"
     }
   },
   "spec": {
