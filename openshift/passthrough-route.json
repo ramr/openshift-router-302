@@ -1,0 +1,18 @@
+{
+  "kind": "Route",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "passthrough-maintenance-test"
+  },
+  "id": "passthrough-maintenance-test",
+  "spec": {
+    "host": "passthrough.maintenance.test",
+    "to": {
+      "kind": "Service",
+      "name": "maintenance-test-secure"
+    },
+    "tls": {
+      "termination": "passthrough"
+    }
+  }
+}

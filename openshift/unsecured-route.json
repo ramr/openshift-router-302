@@ -1,0 +1,15 @@
+{
+  "kind": "Route",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "maintenance-test"
+  },
+  "id": "maintenance-test",
+  "spec": {
+    "host": "maintenance.test",
+    "to": {
+      "kind": "Service",
+      "name": "maintenance-test-insecure"
+    }
+  }
+}

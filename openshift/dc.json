@@ -1,0 +1,49 @@
+{
+  "kind": "DeploymentConfig",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "maintenance-test",
+    "labels": {
+      "name": "maintenance-test"
+    }
+  },
+  "spec": {
+    "template": { 
+      "metadata": {
+        "labels": {
+          "name": "maintenance-test"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "maintenance-test-container",
+            "image": "ramr/maintenance-test:v1",
+            "ports": [
+              {
+                "containerPort": 8080,
+                "protocol": "TCP"
+              },
+              {
+                "containerPort": 8443,
+                "protocol": "TCP"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "replicas": 1, 
+    "selector": {
+      "name": "maintenance-test"
+    },
+    "triggers": [
+      {
+        "type": "ConfigChange" 
+      }
+    ],
+    "strategy": { 
+      "type": "Rolling"
+    }
+  }
+}
